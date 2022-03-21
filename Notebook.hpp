@@ -11,13 +11,12 @@ namespace ariel{
         Page() {}
         ~Page() {}
 
-        void write(int, int, Direction, string) {}
-        void read(int, int, Direction, int) {}
-        void earse(int, int, Direction, int) {}
+        void write(int page, int row, int col, Direction direction, string str) {}
+        void read(int page, int row, int col, Direction direction, int chars) {}
+        void erase(int page, int row, int col, Direction direction, int chars) {}
         void show() {}
-
     private:
-        vector<array<char, 100>> text;
+        vector<array<char, 100>> data;
     };
 
     class Notebook {
