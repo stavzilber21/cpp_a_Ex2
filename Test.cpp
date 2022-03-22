@@ -16,6 +16,7 @@ TEST_CASE("Good input") {
             CHECK(notebook.read(3, 12, 5, Direction::Horizontal, 4) == "stav");
             CHECK(notebook.read(6, 85, 2, Direction::Vertical, 6) == "zilber");
 
+
     for (int i = 0; i < 20; ++i) {
                 CHECK_NOTHROW(notebook.write(i, 2*i, i*3, Direction::Horizontal, "stav"));
     }

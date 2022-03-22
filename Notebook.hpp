@@ -25,7 +25,7 @@ namespace ariel{
         ~Notebook() {}
 
         void write(int page, int row, int col, Direction direction, string str){}
-        string read(int page, int row, int col, Direction direction, int chars) { return ""; }
+        string read(int page, int row, int col, Direction direction, int chars){ return ""; }
         void erase(int page, int row, int col, Direction direction, int chars) {}
         void show(int page) {}
 
