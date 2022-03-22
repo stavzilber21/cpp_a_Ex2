@@ -13,6 +13,8 @@ TEST_CASE("Good input") {
             CHECK_NOTHROW(notebook.read(2, 1, 0, Direction::Horizontal, 4));
             CHECK_NOTHROW(notebook.erase(4, 4, 4, Direction::Vertical, 4));
             CHECK_NOTHROW(notebook.erase(1, 0, 1, Direction::Vertical, 3));
+            CHECK(notebook.read(3, 12, 5, Direction::Horizontal, 4) == "stav");
+            CHECK(notebook.read(6, 85, 2, Direction::Vertical, 6) == "zilber");
 
     for (int i = 0; i < 20; ++i) {
                 CHECK_NOTHROW(notebook.write(i, 2*i, i*3, Direction::Horizontal, "stav"));
@@ -36,6 +38,9 @@ TEST_CASE("Bad input") {
             CHECK_THROWS(notebook.erase(3, -10, 8, Direction::Vertical, 2));
             CHECK_THROWS(notebook.erase(1, 1, -5, Direction::Horizontal, 2));
             CHECK_THROWS(notebook.erase(4, 4, 4, Direction::Vertical, 0));
+            CHECK_THROWS(notebook.erase(4, 4, 4, Direction::Vertical, 102));
+            CHECK_FALSE(notebook.read(2, 99, 43, Direction::Vertical, 4) == "llll");
+
 
 
 }

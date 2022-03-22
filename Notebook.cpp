@@ -10,11 +10,11 @@ namespace ariel {
 
         }
 
-        string read(int page, int row, int col, Direction direction, int chars) {
+        string read(unsigned int page, unsigned int row,unsigned int col, Direction direction,unsigned int chars) {
             return "";
         }
 
-        void erase(int page, int row, int col, Direction direction, int chars) {
+        void erase(unsigned int page,unsigned int row,unsigned int col, Direction direction,unsigned int chars) {
 
         }
 
