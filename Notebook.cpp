@@ -6,7 +6,7 @@ using namespace std;
 
 namespace ariel {
     class notebook {
-        void write(int page, int row, int col, Direction direction, string str) {
+        void write(unsigned int page,unsigned int row,unsigned int col, Direction direction, string str) {
 
         }
 
